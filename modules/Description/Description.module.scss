@@ -1,0 +1,63 @@
+.description {
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.changeLog{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.addLog {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  .date {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px
+  }
+  .data {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.log {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  gap: 20px;
+  .dateChange {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  .date {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .actions {
+      display: flex;
+      gap: 20px;
+    }
+  }
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  button {
+    width: 100%;
+  }
+}
