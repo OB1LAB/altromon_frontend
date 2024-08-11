@@ -9,7 +9,7 @@ const useProfileStore = create((set, get) => ({
       mods: "Есть",
       changeLog: [],
     },
-    "Survival_1.18.2_vanila": {
+    "Survival_1.20.1_vanila": {
       about: "Инфа про Ванила",
       mods: "Нэт",
       changeLog: [],
