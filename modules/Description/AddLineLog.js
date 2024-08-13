@@ -42,10 +42,11 @@ const AddLineLog = ({ addLineLog, server, logId }) => {
         color="green"
         style={{ minWidth: "38px", minHeight: "36px" }}
         onClick={() => {
-          addLineLog(server, logId, addType, content, contentAbout);
-          setAddType("");
-          setAddContent("");
-          setAddContentAbout("");
+          if (!addLineLog(server, logId, addType, content, contentAbout)) {
+            setAddType("add");
+            setAddContent("");
+            setAddContentAbout("");
+          }
         }}
       >
         <PlusIcon />

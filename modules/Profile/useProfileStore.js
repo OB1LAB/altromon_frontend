@@ -3,6 +3,10 @@ import { toast } from "react-toastify";
 import SkinService from "@/services/SkinService";
 
 const useProfileStore = create((set) => ({
+  skinModel: "classic",
+  setSkinModel: (skinModel) => {
+    set({ skinModel });
+  },
   setSkin: async (event) => {
     if (!event || event.target.files.length === 0) {
       return false;
@@ -96,6 +100,26 @@ const useProfileStore = create((set) => ({
       });
     }
     return false;
+  },
+  changeSkinModel: async (skinModel) => {
+    const toastId = toast.loading("Меняем модель скина...");
+    try {
+      await SkinService.changeSkinModel(skinModel);
+      toast.update(toastId, {
+        render: "Модель скина изменена",
+        type: "success",
+        isLoading: false,
+        autoClose: 3000,
+      });
+      set({ skinModel });
+    } catch (e) {
+      toast.update(toastId, {
+        render: e.response.data.message,
+        type: "error",
+        isLoading: false,
+        autoClose: 3000,
+      });
+    }
   },
 }));
 

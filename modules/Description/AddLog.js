@@ -20,15 +20,22 @@ const AddLog = ({ selectedServer }) => {
           onChange={setAddDate}
         ></Input>
         <Button
-          onClick={() =>
-            addLog(
-              selectedServer,
-              addDate,
-              addType,
-              addContent,
-              addContentAbout,
-            )
-          }
+          onClick={() => {
+            if (
+              !addLog(
+                selectedServer,
+                addDate,
+                addType,
+                addContent,
+                addContentAbout,
+              )
+            ) {
+              setAddDate("");
+              setAddType("add");
+              setAddContent("");
+              setAddContentAbout("");
+            }
+          }}
           appearance="primary"
           color="green"
         >

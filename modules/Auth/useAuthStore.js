@@ -4,6 +4,7 @@ import AuthService from "@/services/AuthService";
 import { toast } from "react-toastify";
 import axios from "axios";
 import moment from "moment-timezone";
+import useProfileStore from "@/modules/Profile/useProfileStore";
 
 const useAuthStore = create(
   persist(
@@ -26,6 +27,7 @@ const useAuthStore = create(
             isAuth: true,
             createdAt: moment(res.data.createdAt).format("DD-MM-YYYY HH:mm:ss"),
           });
+          useProfileStore.getState().setSkinModel(res.data.skinModel);
           localStorage.setItem("token", res.data.accessToken);
           toast.update(toastId, {
             render: "Авторизирован",
@@ -69,6 +71,7 @@ const useAuthStore = create(
             username: get().registerUserName,
             createdAt: moment(res.data.createdAt).format("DD-MM-YYYY HH:mm:ss"),
           });
+          useProfileStore.getState().setSkinModel(res.data.skinModel);
           localStorage.setItem("token", res.data.accessToken);
           toast.update(toastId, {
             render: "Зарегистрирован",
@@ -96,6 +99,7 @@ const useAuthStore = create(
             username: res.data.username,
             createdAt: moment(res.data.createdAt).format("DD-MM-YYYY HH:mm:ss"),
           });
+          useProfileStore.getState().setSkinModel(res.data.skinModel);
           localStorage.setItem("token", res.data.accessToken);
         } catch (e) {
           console.log(e);

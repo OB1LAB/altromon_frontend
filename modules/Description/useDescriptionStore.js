@@ -102,11 +102,12 @@ const useProfileStore = create((set, get) => ({
   },
   addLog(server, date, type, content, about) {
     if (!date || !type || !content) {
-      return toast("Заполнены не все обязательные поля", {
+      toast("Заполнены не все обязательные поля", {
         render: "Заполнены не все обязательные поля",
         type: "error",
         autoClose: 3000,
       });
+      return true;
     }
     const changeLog = get().description[server].changeLog;
     changeLog.unshift({

@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { SkinViewer } from "skinview3d";
 import useAuthStore from "@/modules/Auth/useAuthStore";
 import styles from "./Profile.module.scss";
-import { Button, Input } from "rsuite";
+import { Button, Input, Radio, RadioGroup } from "rsuite";
 import useProfileStore from "@/modules/Profile/useProfileStore";
 import { toast } from "react-toastify";
 import ChangePasswordService from "@/services/ChangePasswordService";
@@ -12,10 +12,14 @@ const Profile = () => {
   const [password, setPassword] = useState("");
   const [retryPassword, setRetryPassword] = useState("");
   const [updateSkin, setUpdateSkin] = useState(false);
+  const skinModelType = useProfileStore((store) => store.skinModel);
   const setSkin = useProfileStore((store) => store.setSkin);
   const setCape = useProfileStore((store) => store.setCape);
   const deleteSkin = useProfileStore((store) => store.deleteSkin);
   const deleteCape = useProfileStore((store) => store.deleteCape);
+  const changeSkinModelStore = useProfileStore(
+    (store) => store.changeSkinModel,
+  );
   const username = useAuthStore((store) => store.username);
   const createdAt = useAuthStore((store) => store.createdAt);
   const logout = useAuthStore((store) => store.logout);
@@ -56,7 +60,7 @@ const Profile = () => {
       new SkinViewer({
         canvas: skinRef.current,
         width: 400,
-        height: 500,
+        height: 538,
         skin: `${process.env.NEXT_PUBLIC_API_URL}/skins/textures/skin/${username}/${new Date().getTime()}`,
         cape: `${process.env.NEXT_PUBLIC_API_URL}/skins/textures/cape/${username}/${new Date().getTime()}`,
         panorama: "/panorama.png",
@@ -92,6 +96,23 @@ const Profile = () => {
           </Button>
         </div>
         <div className={styles.buttons}>
+          <div className={styles.aboutSkin}>
+            <div>Максимальные разрешения</div>
+            <div>1.12.2 - скин 1024px, плащ 512px</div>
+            <div>1.20.1 - скин 64px, плащ 512px</div>
+          </div>
+          <div className={styles.skinModel}>
+            <div style={{ fontSize: "16px" }}>Тип скина:</div>
+            <RadioGroup
+              name="modelSkin"
+              inline
+              onChange={(value) => changeSkinModelStore(value)}
+              value={skinModelType}
+            >
+              <Radio value="classic">Classic</Radio>
+              <Radio value="slim">Slim</Radio>
+            </RadioGroup>
+          </div>
           <label htmlFor="skin" className="rs-btn rs-btn-primary">
             Загрузить скин
           </label>

@@ -1,15 +1,15 @@
 .profile {
   display: flex;
   gap: 20px;
-  font-size: 21px;
   .info {
+    font-size: 21px;
     display: flex;
     flex-direction: column;
     .buttons {
       display: flex;
       flex-direction: column;
       gap: 10px;
-      margin-top: auto;
+      font-size: 14px;
     }
   }
 }
@@ -21,3 +21,18 @@
   padding-top:10px;
 }
 
+.skinModel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: -5px;
+}
+
+.aboutSkin {
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: -10px;
+  :first-child {
+    text-align: center;
+  }
+}

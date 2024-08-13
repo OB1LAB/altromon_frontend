@@ -11,6 +11,9 @@ export default class SkinService {
       headers: { "content-type": "multipart/form-data" },
     });
   }
+  static changeSkinModel(skinModel) {
+    return $api.post("/skins/changeTypeSkin", { skinModel });
+  }
   static deleteSkin() {
     return $api.get("/skins/deleteSkin");
   }
