@@ -29,6 +29,8 @@ export default function CustomBody({ children }) {
             theme="dark"
           />
         </main>
+        <div className="background" />
+        <div className="background2" />
       </body>
     );
   return (
@@ -47,6 +49,8 @@ export default function CustomBody({ children }) {
             theme={themeColor}
           />
         </main>
+        <div className="background" />
+        <div className="background2" />
       </CustomProvider>
     </body>
   );

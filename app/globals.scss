@@ -17,6 +17,41 @@ body {
   }
 }
 
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+  //100% {
+  //  scale: 3;
+  //  transform: rotate(0deg);
+  //}
+}
+
+.background {
+  position: fixed;
+  z-index: -998;
+  width: 100vw;
+  height: 100vh;
+  scale: 2;
+  background-image: url("../public/circles.png");
+  background-size: cover;
+  //background-repeat: no-repeat;
+  //background-position: center;
+  animation: rotate 420s linear infinite;
+  filter: blur(100px);
+}
+
+.background2 {
+  position: fixed;
+  z-index: -999;
+  width: 100vw;
+  height: 100vh;
+  background: #141414;
+}
+
 :root {
   .rs-theme-dark,
   .rs-theme-light {
@@ -24,6 +59,9 @@ body {
   }
   .rs-sidenav {
     height: 100%;
+  }
+  .rs-navbar-default {
+    background: rgba(0, 0, 0, 0.1);
   }
   .rs-nav-vertical {
     margin-bottom: 0;
