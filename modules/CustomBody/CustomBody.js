@@ -1,13 +1,13 @@
 "use client";
 import { CustomProvider } from "rsuite";
 import useAuthStore from "@/modules/Auth/useAuthStore";
-import localFont from "next/font/local";
 import NavBar from "@/modules/NavBar/NavBar";
 import { ToastContainer } from "react-toastify";
 import { useEffect } from "react";
 import CustomFooter from "@/modules/CustomFooter/CustomFooter";
+import { Inter } from "next/font/google";
 
-const elliotFont = localFont({ src: "elliot.woff2" });
+const inter = Inter({ subsets: ["cyrillic"] });
 
 export default function CustomBody({ children }) {
   const isLoading = useAuthStore((store) => store.isLoading);
@@ -18,7 +18,7 @@ export default function CustomBody({ children }) {
   }, []);
   if (isLoading)
     return (
-      <body className={`${elliotFont.className} rs-theme-dark`}>
+      <body className={`${inter.className} rs-theme-dark`}>
         <header />
         <main>
           <div>Загрузка...</div>
@@ -36,7 +36,7 @@ export default function CustomBody({ children }) {
       </body>
     );
   return (
-    <body className={elliotFont.className}>
+    <body className={inter.className}>
       <CustomProvider theme={themeColor}>
         <header>
           <NavBar />

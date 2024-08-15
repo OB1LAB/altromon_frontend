@@ -94,13 +94,9 @@ body {
     .rs-auto-complete-menu-items {
       opacity: 0.9;
     }
-  }
-  .rs-theme-light {
-    --background_item_shop: #f7f7fa;
-    --background-scroolbar-thumb: #b3b3b3;
-    --background-color-placeholder: #ebebeb;
-    --background-color-placeholder-table: #f7f7fa;
-    --background-color-placeholder-table-item: #ebebeb;
+    .rs-carousel-slider-item {
+      height: fit-content;
+    }
   }
   .rs-input-number-btn-group-vertical {
     display: none;
@@ -155,7 +151,7 @@ body {
         justify-content: center;
         a {
           font-size: 36px;
-          font-weight: bold;
+          font-weight: 550;
           color: white;
           text-decoration: none;
           background: rgba(0, 0, 0, 0.6);
@@ -171,7 +167,7 @@ body {
       .about {
         color: white;
         font-size: 72px;
-        font-weight: bold;
+        font-weight: 550;
         padding-top: 10px;
       }
       .createdBy {
