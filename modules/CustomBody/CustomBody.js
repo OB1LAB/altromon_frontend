@@ -5,6 +5,7 @@ import localFont from "next/font/local";
 import NavBar from "@/modules/NavBar/NavBar";
 import { ToastContainer } from "react-toastify";
 import { useEffect } from "react";
+import CustomFooter from "@/modules/CustomFooter/CustomFooter";
 
 const elliotFont = localFont({ src: "elliot.woff2" });
 
@@ -29,6 +30,7 @@ export default function CustomBody({ children }) {
             theme="dark"
           />
         </main>
+        <CustomFooter />
         <div className="background" />
         <div className="background2" />
       </body>
@@ -51,6 +53,7 @@ export default function CustomBody({ children }) {
         </main>
         <div className="background" />
         <div className="background2" />
+        <CustomFooter />
       </CustomProvider>
     </body>
   );

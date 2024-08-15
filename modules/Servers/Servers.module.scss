@@ -1,0 +1,53 @@
+.servers {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0);
+}
+
+.slider {
+  height: 400px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 30px;
+  img {
+    width: 700px;
+    height: fit-content;
+    border-radius: 30px;
+  }
+}
+
+.server {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-weight: bold;
+  a {
+    font-size: 24px;
+    color: white;
+    font-weight: 700;
+    background: rgb(143, 33, 194);
+    padding: 20px 50px;
+    border-radius: 10px;
+    text-decoration: none;
+  }
+  .about {
+    color: black;
+    background: rgba(217, 217, 217, 0.8);
+  }
+  .name {
+    font-size: 48px;
+    text-transform: uppercase;
+  }
+  .version {
+    font-size: 20px;
+  }
+  .description {
+    padding: 15px 0;
+    font-size: 24px;
+  }
+  .links {
+    display: flex;
+    gap: 20px;
+  }
+}
