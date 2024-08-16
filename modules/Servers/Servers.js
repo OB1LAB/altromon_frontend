@@ -36,16 +36,13 @@ const serverList = [
 const Servers = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const selectNext = () => {
-    if (activeIndex + 1 === serverList.length) {
-      return setActiveIndex(0);
-    }
-    setActiveIndex(activeIndex + 1);
+    setActiveIndex((activeIndex + 1) % serverList.length);
   };
   const selectBack = () => {
     if (activeIndex === 0) {
       return setActiveIndex(serverList.length - 1);
     }
-    setActiveIndex(activeIndex - 1);
+    setActiveIndex((activeIndex - 1) % serverList.length);
   };
   return (
     <Carousel
