@@ -1,7 +1,12 @@
+"use client";
 import styles from "./Servers.module.scss";
-import { Button, Carousel } from "rsuite";
+import { Carousel } from "rsuite";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+import ArrowLeftLine from "@rsuite/icons/ArrowLeftLine";
+import ArrowRightLine from "@rsuite/icons/ArrowRightLine";
+
 const serverList = [
   {
     name: "classic",
@@ -29,8 +34,25 @@ const serverList = [
   },
 ];
 const Servers = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const selectNext = () => {
+    if (activeIndex + 1 === serverList.length) {
+      return setActiveIndex(0);
+    }
+    setActiveIndex(activeIndex + 1);
+  };
+  const selectBack = () => {
+    if (activeIndex === 0) {
+      return setActiveIndex(serverList.length - 1);
+    }
+    setActiveIndex(activeIndex - 1);
+  };
   return (
-    <Carousel className={styles.slider}>
+    <Carousel
+      className={styles.slider}
+      activeIndex={activeIndex}
+      onSelect={(index) => setActiveIndex(index)}
+    >
       {serverList.map((server, serverId) => {
         return (
           <div key={serverId} className={styles.servers}>
@@ -48,13 +70,21 @@ const Servers = () => {
                 </Link>
               </div>
             </div>
-            <Image
-              sizes="100vw"
-              width={0}
-              height={0}
-              src={"/altromon_about.png"}
-              alt="server"
-            />
+            <div className={styles.image}>
+              <div onClick={selectBack}>
+                <ArrowLeftLine />
+              </div>
+              <Image
+                sizes="100vw"
+                width={0}
+                height={0}
+                src={"/altromon_about.png"}
+                alt="server"
+              />
+              <div onClick={selectNext}>
+                <ArrowRightLine />
+              </div>
+            </div>
           </div>
         );
       })}
