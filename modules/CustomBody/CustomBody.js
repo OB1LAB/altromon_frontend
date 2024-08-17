@@ -5,9 +5,9 @@ import NavBar from "@/modules/NavBar/NavBar";
 import { ToastContainer } from "react-toastify";
 import { useEffect } from "react";
 import CustomFooter from "@/modules/CustomFooter/CustomFooter";
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 
-const inter = Inter({ subsets: ["cyrillic"] });
+const NTSomicFont = localFont({ src: "NTSomic.woff2" });
 
 export default function CustomBody({ children }) {
   const isLoading = useAuthStore((store) => store.isLoading);
@@ -18,7 +18,7 @@ export default function CustomBody({ children }) {
   }, []);
   if (isLoading)
     return (
-      <body className={`${inter.className} rs-theme-dark`}>
+      <body className={`${NTSomicFont.className} rs-theme-dark`}>
         <header />
         <main>
           <div>Загрузка...</div>
@@ -36,7 +36,7 @@ export default function CustomBody({ children }) {
       </body>
     );
   return (
-    <body className={inter.className}>
+    <body className={NTSomicFont.className}>
       <CustomProvider theme={themeColor}>
         <header>
           <NavBar />

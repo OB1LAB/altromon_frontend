@@ -10,20 +10,28 @@ const NavBar = () => {
   const pathPage = usePathname();
   const isAuth = useAuthStore((store) => store.isAuth);
   const username = useAuthStore((store) => store.username);
+  const currentPath = `/${pathPage.split("/")[1]}`;
   if (!isAuth) {
     return (
       <Navbar>
         <Nav className={styles.nav}>
-          <Nav.Item href={"/"} as={Link} active={"/" === pathPage}>
+          <Nav.Item href={"/"} as={Link} active={"/" === currentPath}>
             AltroMon
           </Nav.Item>
-          <Nav.Item href={"/login"} as={Link} active={"/login" === pathPage}>
-            Авторизация
+          <Nav.Item
+            href={"/servers"}
+            as={Link}
+            active={"/servers" === currentPath}
+          >
+            Сервера
+          </Nav.Item>
+          <Nav.Item href={"/login"} as={Link} active={"/login" === currentPath}>
+            Логин
           </Nav.Item>
           <Nav.Item
             href={"/register"}
             as={Link}
-            active={"/register" === pathPage}
+            active={"/register" === currentPath}
           >
             Регистрация
           </Nav.Item>
@@ -35,27 +43,34 @@ const NavBar = () => {
     return (
       <Navbar>
         <Nav className={styles.nav}>
-          <Nav.Item href={"/"} as={Link} active={"/" === pathPage}>
+          <Nav.Item href={"/"} as={Link} active={"/" === currentPath}>
             AltroMon
+          </Nav.Item>
+          <Nav.Item
+            href={"/servers"}
+            as={Link}
+            active={"/servers" === currentPath}
+          >
+            Сервера
           </Nav.Item>
           <Nav.Item
             href={"/description"}
             as={Link}
-            active={"/description" === pathPage}
+            active={"/description" === currentPath}
           >
             Описание серверов
           </Nav.Item>
           <Nav.Item
             href={"/password"}
             as={Link}
-            active={"/password" === pathPage}
+            active={"/password" === currentPath}
           >
             Смена паролей
           </Nav.Item>
           <Nav.Item
             href={"/profile"}
             as={Link}
-            active={"/profile" === pathPage}
+            active={"/profile" === currentPath}
           >
             Профиль
           </Nav.Item>
@@ -66,10 +81,21 @@ const NavBar = () => {
   return (
     <Navbar>
       <Nav className={styles.nav}>
-        <Nav.Item href={"/"} as={Link} active={"/" === pathPage}>
+        <Nav.Item href={"/"} as={Link} active={"/" === currentPath}>
           AltroMon
         </Nav.Item>
-        <Nav.Item href={"/profile"} as={Link} active={"/profile" === pathPage}>
+        <Nav.Item
+          href={"/servers"}
+          as={Link}
+          active={"/servers" === currentPath}
+        >
+          Сервера
+        </Nav.Item>
+        <Nav.Item
+          href={"/profile"}
+          as={Link}
+          active={"/profile" === currentPath}
+        >
           Профиль
         </Nav.Item>
       </Nav>

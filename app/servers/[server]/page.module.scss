@@ -1,0 +1,73 @@
+.page {
+  max-width: 1480px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0 40px;
+}
+
+.preview {
+  position: relative;
+  img {
+    height: auto;
+    width: 100%;
+    filter: brightness(60%);
+    border-radius: 20px;
+  }
+  div {
+    font-size: 100px;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.mods {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  .mod {
+    display: flex;
+    align-items: center;
+    .name {
+      min-width: 320px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      white-space: nowrap;
+      img {
+        image-rendering: pixelated;
+      }
+    }
+  }
+}
+
+.install {
+  font-size: 72px;
+  text-align: center;
+  color: #9024c1
+}
+
+@media (max-width: 800px) {
+  .mods .mod .name {
+    min-width: 245px;
+  }
+  .additions {
+    font-size: 16px;
+  }
+  .preview div {
+    font-size: 50px;
+  }
+  .install {
+    font-size: 36px;
+  }
+  .mods {
+    font-size: 16px;
+  }
+}

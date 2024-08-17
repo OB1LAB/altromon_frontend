@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Servers from "@/modules/Servers/Servers";
-import Link from "next/link";
 import Information from "@/modules/Information/Information";
+import HoveredDownloadLauncher from "@/modules/HoveredDownloadLauncher/HoveredDownloadLauncher";
 
 export default function Home() {
   return (
@@ -14,7 +14,6 @@ export default function Home() {
           sizes="100vw"
           width={0}
           height={0}
-          style={{ width: "100%", height: "auto" }}
         />
         <div className="logo">
           <div className="upperLogo">
@@ -27,9 +26,7 @@ export default function Home() {
               style={{ width: "40%", height: "auto" }}
             />
             <div className="about">Локальный Minecraft проект</div>
-            <Link href="https://altromon.ob1lab.ru/static/AltroMon%20Launcher%20Updater.exe">
-              Скачать Лаунчер
-            </Link>
+            <HoveredDownloadLauncher />
           </div>
           <div className="createdBy">
             Создан исключительно в развлекательных целях

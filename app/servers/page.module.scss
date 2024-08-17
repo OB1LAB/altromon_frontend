@@ -1,0 +1,35 @@
+.servers {
+  display: flex;
+  gap: 20px;
+  a {
+    color: white;
+    text-decoration: navajowhite;
+  }
+}
+
+.server {
+  position: relative;
+  cursor: pointer;
+  img {
+    width: 350px;
+    height: auto;
+    border-radius: 20px;
+    filter: brightness(60%);
+  }
+  div {
+    top: 0;
+    font-size: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .servers {
+    flex-direction: column;
+  }
+}
