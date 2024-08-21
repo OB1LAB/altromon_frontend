@@ -1,6 +1,9 @@
 .profile {
   display: flex;
   gap: 20px;
+  padding: 25px;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.1);
   .info {
     font-size: 21px;
     display: flex;

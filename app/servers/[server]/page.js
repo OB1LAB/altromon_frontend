@@ -17,34 +17,62 @@ const Page = () => {
           width={0}
           height={0}
         />
-        <div>{info.name}</div>
+        <div className={styles.serverName}>
+          <div>{info.name}</div>
+          <div className={styles.previewName}>{info.description}</div>
+        </div>
       </div>
-      <div className={styles.additions}>{info.description}</div>
-      <div
-        className={styles.additions}
-        dangerouslySetInnerHTML={{ __html: info.possibilities }}
-      />
       <div className={styles.additions}>
-        {info.commands.map((item, itemId) => (
-          <div key={itemId}>{item}</div>
-        ))}
+        <div className={styles.descriptionLabel}>Описание</div>
+        <hr />
+        <div dangerouslySetInnerHTML={{ __html: info.possibilities }} />
+      </div>
+      <div className={styles.additions}>
+        <div className={styles.descriptionLabel}>Команды</div>
+        <hr />
+        {info.commands.map((item, itemId) =>
+          item.length > 0 ? (
+            <div key={itemId}>{item}</div>
+          ) : (
+            <br key={itemId} />
+          ),
+        )}
       </div>
       <div className={styles.install}>Установленные модификации</div>
       <div className={styles.mods}>
         {info.mods.map((item, itemId) => {
-          return (
-            <div key={itemId} className={styles.mod}>
-              <div className={styles.name}>
-                <Image
-                  src={`/icons/${item.name}.${item.type}`}
-                  alt={item.name}
-                  width={48}
-                  height={48}
-                />
-                <div>{item.name}</div>
+          if (itemId === info.mods.length - 1) {
+            return (
+              <div key={itemId} className={styles.mod}>
+                <div className={styles.name}>
+                  <Image
+                    src={`/icons/${item.name}.${item.type}`}
+                    alt={item.name}
+                    width={48}
+                    height={48}
+                  />
+                  <div>{item.name}</div>
+                </div>
+                <div>{item.about}</div>
               </div>
-              <div>{item.about}</div>
-            </div>
+            );
+          }
+          return (
+            <>
+              <div key={itemId} className={styles.mod}>
+                <div className={styles.name}>
+                  <Image
+                    src={`/icons/${item.name}.${item.type}`}
+                    alt={item.name}
+                    width={48}
+                    height={48}
+                  />
+                  <div>{item.name}</div>
+                </div>
+                <div>{item.about}</div>
+              </div>
+              <hr />
+            </>
           );
         })}
       </div>

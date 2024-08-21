@@ -64,7 +64,6 @@ const Profile = () => {
         skin: `${process.env.NEXT_PUBLIC_API_URL}/skins/textures/skin/${username}/${new Date().getTime()}`,
         cape: `${process.env.NEXT_PUBLIC_API_URL}/skins/textures/cape/${username}/${new Date().getTime()}`,
         // panorama: "/panorama.png",
-        zoom: 0.5,
       });
     }
   }, [updateSkin]);

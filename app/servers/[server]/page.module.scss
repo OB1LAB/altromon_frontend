@@ -15,7 +15,7 @@
     filter: brightness(60%);
     border-radius: 20px;
   }
-  div {
+  .serverName {
     font-size: 100px;
     position: absolute;
     top: 0;
@@ -23,15 +23,29 @@
     width: 100%;
     font-weight: bold;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 }
 
+.previewName {
+  font-size: 30px;
+}
+
+.descriptionLabel {
+  font-weight: bold;
+  font-size: 30px;
+}
+
 .mods {
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.05);
   display: flex;
   flex-direction: column;
   gap: 15px;
+  border-radius: 15px;
+  margin-top: 41px;
   .mod {
     display: flex;
     align-items: center;
@@ -51,7 +65,18 @@
 .install {
   font-size: 72px;
   text-align: center;
-  color: #9024c1
+  background: linear-gradient(20deg, white, #7200ff 200%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 20px;
+}
+
+.additions {
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  margin-top: 20px;
 }
 
 @media (max-width: 800px) {
@@ -60,14 +85,19 @@
   }
   .additions {
     font-size: 16px;
+    padding: 10px;
   }
-  .preview div {
+  .preview .serverName {
     font-size: 50px;
+  }
+  .previewName {
+    font-size: 20px;
   }
   .install {
     font-size: 36px;
   }
   .mods {
+    padding: 10px;
     font-size: 16px;
   }
 }
