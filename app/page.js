@@ -16,18 +16,16 @@ export default function Home() {
           height={0}
         />
         <div className="logo">
-          <div className="upperLogo">
-            <Image
-              src="/logo.png"
-              alt="logo"
-              sizes="100vw"
-              width={0}
-              height={0}
-              style={{ width: "40%", height: "auto" }}
-            />
-            <div className="about">Локальный Minecraft проект</div>
-            <HoveredDownloadLauncher />
-          </div>
+          <Image
+            src="/logo.png"
+            alt="logo"
+            sizes="100vw"
+            width={0}
+            height={0}
+            style={{ width: "40%", height: "auto" }}
+          />
+          <div className="about">Локальный Minecraft проект</div>
+          <HoveredDownloadLauncher />
           <div className="createdBy">
             Создан исключительно в развлекательных целях
           </div>
