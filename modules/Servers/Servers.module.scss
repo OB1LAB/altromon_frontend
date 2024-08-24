@@ -135,23 +135,25 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 460px) {
   .image {
-    width: 315px;
+    width: 320px;
   }
   .slider {
+    width: 100%;
     align-items: center;
     justify-content: center;
     height: fit-content;
     margin-top: 0;
     padding: 20px 10px;
     padding-bottom: 70px;
-    padding-left: 20px;
+    padding: 0;
     .description {
       max-width: 310px;
     }
   }
   .servers {
+    align-items: center;
     flex-direction: column-reverse;
     .links {
       width: 300px;
