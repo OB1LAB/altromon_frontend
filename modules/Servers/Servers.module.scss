@@ -137,12 +137,19 @@
 
 @media (max-width: 400px) {
   .image {
-    width: 300px;
+    width: 315px;
   }
   .slider {
+    align-items: center;
+    justify-content: center;
     height: fit-content;
-    padding-bottom: 70px;
     margin-top: 0;
+    padding: 20px 10px;
+    padding-bottom: 70px;
+    padding-left: 20px;
+    .description {
+      max-width: 310px;
+    }
   }
   .servers {
     flex-direction: column-reverse;
