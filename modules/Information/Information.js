@@ -35,7 +35,7 @@ const Information = () => {
             sizes="100vw"
             width={0}
             height={0}
-            src={"/panorama.png"}
+            src={"/custom.png"}
             alt="custom"
           />
         </div>
@@ -44,7 +44,7 @@ const Information = () => {
             sizes="100vw"
             width={0}
             height={0}
-            src={"/panorama.png"}
+            src={"/launcher.png"}
             alt="custom"
           />
           <div className={`${styles.content} ${styles.centered}`}>
@@ -80,7 +80,7 @@ const Information = () => {
               Данный проект создаётся исключительно на энтузиазме и мотивации
               двух студентов.
             </div>
-            <div className={styles.link}>Круто!</div>
+            <div className={styles.link}>Подарите пж дошик</div>
           </div>
           <div className={styles.groupBlock}>
             <Image
@@ -90,10 +90,45 @@ const Information = () => {
               src={"/panorama.png"}
               alt="custom"
             />
-            <div className={styles.blockName}>Отсутствие доната</div>
+            <div className={styles.blockName}>Низкий пинг</div>
             <div className={styles.blockDescription}>
-              Данный проект создаётся исключительно на энтузиазме и мотивации
-              двух студентов.
+              Сервер находится в СНГ, благодаря чему задержки минимальны.
+            </div>
+            <div className={styles.link}>Ура!</div>
+          </div>
+          <div className={styles.groupBlock}>
+            <Image
+              sizes="100vw"
+              width={0}
+              height={0}
+              src={"/server.jpg"}
+              alt="custom"
+            />
+            <div className={styles.blockName}>Стабильность работы</div>
+            <div className={styles.blockDescription}>
+              Мы{" "}
+              <s>
+                <u>
+                  <i>скорее всего</i>
+                </u>
+              </s>{" "}
+              выдержим любые нагрузки, в ином случае время работоспособность
+              будет восстановлена в кратчайшие сроки.
+            </div>
+            <div className={styles.link}>WoW!</div>
+          </div>
+          <div className={styles.groupBlock}>
+            <Image
+              sizes="100vw"
+              width={0}
+              height={0}
+              src={"/panorama.png"}
+              alt="custom"
+            />
+            <div className={styles.blockName}>Отзывчивая администрация</div>
+            <div className={styles.blockDescription}>
+              Мы дорожим своей аудиторией, поэтому ответим каждому и на любой
+              вопрос!
             </div>
             <div className={styles.link}>Круто!</div>
           </div>
@@ -105,12 +140,18 @@ const Information = () => {
               src={"/panorama.png"}
               alt="custom"
             />
-            <div className={styles.blockName}>Отсутствие доната</div>
+            <div className={styles.blockName}>Активная разработка</div>
             <div className={styles.blockDescription}>
-              Данный проект создаётся исключительно на энтузиазме и мотивации
-              двух студентов.
+              Наш проект является публичным, в том числе и исходный код, который
+              вы можете посмотреть на github!
             </div>
-            <div className={styles.link}>Круто!</div>
+            <Link
+              target="_blank"
+              href="https://github.com/AltromonTeam"
+              className={styles.link}
+            >
+              Следить за изменениями
+            </Link>
           </div>
           <div className={styles.groupBlock}>
             <Image
@@ -120,42 +161,12 @@ const Information = () => {
               src={"/panorama.png"}
               alt="custom"
             />
-            <div className={styles.blockName}>Отсутствие доната</div>
+            <div className={styles.blockName}>Минимум правил</div>
             <div className={styles.blockDescription}>
-              Данный проект создаётся исключительно на энтузиазме и мотивации
-              двух студентов.
+              Единственное, что вы должны соблюдать - комфорт игры для других
+              игроков.
             </div>
-            <div className={styles.link}>Круто!</div>
-          </div>
-          <div className={styles.groupBlock}>
-            <Image
-              sizes="100vw"
-              width={0}
-              height={0}
-              src={"/panorama.png"}
-              alt="custom"
-            />
-            <div className={styles.blockName}>Отсутствие доната</div>
-            <div className={styles.blockDescription}>
-              Данный проект создаётся исключительно на энтузиазме и мотивации
-              двух студентов.
-            </div>
-            <div className={styles.link}>Круто!</div>
-          </div>
-          <div className={styles.groupBlock}>
-            <Image
-              sizes="100vw"
-              width={0}
-              height={0}
-              src={"/panorama.png"}
-              alt="custom"
-            />
-            <div className={styles.blockName}>Отсутствие доната</div>
-            <div className={styles.blockDescription}>
-              Данный проект создаётся исключительно на энтузиазме и мотивации
-              двух студентов.
-            </div>
-            <div className={styles.link}>Круто!</div>
+            <div className={styles.link}>Ого!</div>
           </div>
         </div>
       </div>

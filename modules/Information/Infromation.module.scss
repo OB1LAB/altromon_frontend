@@ -8,7 +8,7 @@
   align-items: center;
   gap: 40px;
   border-radius: 15px;
-  //background: rgba(0, 0, 0, 0.05);
+  justify-content: center;
   .name {
     width: fit-content;
     background: linear-gradient(20deg, white, #7200ff 200%);
@@ -17,6 +17,7 @@
     -webkit-text-fill-color: transparent;
   }
   .content {
+    max-width: 700px;
     height: 360px;
     display: flex;
     flex-direction: column;
@@ -62,11 +63,16 @@
   }
   img {
     flex-shrink: 0;
-    width: 720px;
+    width: auto;
     height: 360px;
     border-radius: 15px;
     background-size: cover;
+    box-shadow: 0px 0px 40px 40px rgba(0, 0, 0, 0.15);
   }
+}
+
+.reverse .content {
+  max-width: 559px;
 }
 
 .blocks {
@@ -131,7 +137,7 @@
   margin-top: 60px;
   .groupBlock {
     max-width: 432px;
-    height: 400px;
+    height: auto;
     display: flex;
     flex-direction: column;
     backdrop-filter: blur(100px);
@@ -162,12 +168,15 @@
       margin-top: auto;
       margin-bottom: 5px;
       padding-left: 10px;
+      text-decoration: none;
+      color: white;
+      padding-top: 10px;
     }
     img {
       top: -40px;
       position: relative;
-      width: 400px;
-      height: auto;
+      width: auto;
+      height: 200px;
       border-radius: 10px;
       box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.4);
     }
@@ -219,6 +228,9 @@
   .blocks {
     .groupBlocks {
       width: 432px;
+      .groupBlock {
+        width: 100%;
+      }
     }
   }
   .info {

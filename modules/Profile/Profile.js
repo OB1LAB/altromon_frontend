@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { SkinViewer } from "skinview3d";
+import { SkinViewer, IdleAnimation } from "skinview3d";
 import useAuthStore from "@/modules/Auth/useAuthStore";
 import styles from "./Profile.module.scss";
 import { Button, Input, Radio, RadioGroup } from "rsuite";
@@ -63,6 +63,7 @@ const Profile = () => {
         height: 538,
         skin: `${process.env.NEXT_PUBLIC_API_URL}/skins/textures/skin/${username}/${new Date().getTime()}`,
         cape: `${process.env.NEXT_PUBLIC_API_URL}/skins/textures/cape/${username}/${new Date().getTime()}`,
+        animation: new IdleAnimation(),
         // panorama: "/panorama.png",
       });
     }
