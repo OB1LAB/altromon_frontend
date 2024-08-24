@@ -192,6 +192,8 @@ body {
         margin-bottom: 25px;
       }
       img {
+        height: auto;
+        width: 40%;
         margin-top: 50px;
       }
     }
@@ -292,6 +294,30 @@ body {
           padding: 10px 20px;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .page {
+    padding: 0 10px;
+    .preview {
+      width: 320px;
+      margin: 0 auto;
+      .logo {
+        a {
+          display: none;
+        }
+        .createdBy {
+          display: none;
+        }
+        img {
+          width: 200px;
+        }
+      }
+    }
+    .altromon_about {
+      width: 320px;
     }
   }
 }

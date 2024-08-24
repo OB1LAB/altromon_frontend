@@ -134,3 +134,24 @@
     }
   }
 }
+
+@media (max-width: 400px) {
+  .image {
+    width: 300px;
+  }
+  .slider {
+    height: fit-content;
+    padding-bottom: 70px;
+    margin-top: 0;
+  }
+  .servers {
+    flex-direction: column-reverse;
+    .links {
+      width: 300px;
+      flex-direction: column;
+      a {
+        text-align: center;
+      }
+    }
+  }
+}

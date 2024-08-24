@@ -22,7 +22,6 @@ export default function Home() {
             sizes="100vw"
             width={0}
             height={0}
-            style={{ width: "40%", height: "auto" }}
           />
           <div className="about">Локальный Minecraft проект</div>
           <HoveredDownloadLauncher />

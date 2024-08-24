@@ -242,3 +242,25 @@
     }
   }
 }
+
+@media (max-width: 400px) {
+  .block {
+    gap: 60px;
+  }
+  .blocks {
+    .groupBlocks {
+      width: 300px;
+      gap: 60px;
+      .groupBlock {
+        width: 300px;
+        img {
+          height: auto;
+          width: 270px;
+        }
+      }
+    }
+  }
+  .info {
+    font-size: 48px;
+  }
+}
