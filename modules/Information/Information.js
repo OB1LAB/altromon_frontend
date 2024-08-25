@@ -32,18 +32,18 @@ const Information = () => {
             </div>
           </div>
           <Image
-            sizes="100vw"
-            width={0}
-            height={0}
+            quality={100}
+            width={433}
+            height={360}
             src={"/custom.png"}
             alt="custom"
           />
         </div>
         <div className={`${styles.block} ${styles.reverse}`}>
           <Image
-            sizes="100vw"
-            width={0}
-            height={0}
+            quality={100}
+            width={589}
+            height={360}
             src={"/launcher.png"}
             alt="custom"
           />
@@ -69,10 +69,10 @@ const Information = () => {
         <div className={styles.groupBlocks}>
           <div className={styles.groupBlock}>
             <Image
-              sizes="100vw"
-              width={0}
-              height={0}
-              src={"/panorama.png"}
+              quality={100}
+              width={400}
+              height={200}
+              src={"/nodonate.png"}
               alt="custom"
             />
             <div className={styles.blockName}>Отсутствие доната</div>
@@ -84,10 +84,10 @@ const Information = () => {
           </div>
           <div className={styles.groupBlock}>
             <Image
-              sizes="100vw"
-              width={0}
-              height={0}
-              src={"/panorama.png"}
+              quality={100}
+              width={400}
+              height={200}
+              src={"/lowping.png"}
               alt="custom"
             />
             <div className={styles.blockName}>Низкий пинг</div>
@@ -98,9 +98,9 @@ const Information = () => {
           </div>
           <div className={styles.groupBlock}>
             <Image
-              sizes="100vw"
-              width={0}
-              height={0}
+              quality={100}
+              width={400}
+              height={200}
               src={"/server.jpg"}
               alt="custom"
             />
@@ -119,10 +119,10 @@ const Information = () => {
           </div>
           <div className={styles.groupBlock}>
             <Image
-              sizes="100vw"
-              width={0}
-              height={0}
-              src={"/panorama.png"}
+              quality={100}
+              width={400}
+              height={200}
+              src={"/feedback.png"}
               alt="custom"
             />
             <div className={styles.blockName}>Отзывчивая администрация</div>
@@ -134,10 +134,10 @@ const Information = () => {
           </div>
           <div className={styles.groupBlock}>
             <Image
-              sizes="100vw"
-              width={0}
-              height={0}
-              src={"/panorama.png"}
+              quality={100}
+              width={400}
+              height={200}
+              src={"/github.png"}
               alt="custom"
             />
             <div className={styles.blockName}>Активная разработка</div>
@@ -155,10 +155,10 @@ const Information = () => {
           </div>
           <div className={styles.groupBlock}>
             <Image
-              sizes="100vw"
-              width={0}
-              height={0}
-              src={"/panorama.png"}
+              quality={100}
+              width={400}
+              height={200}
+              src={"/rules.png"}
               alt="custom"
             />
             <div className={styles.blockName}>Минимум правил</div>

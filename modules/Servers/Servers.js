@@ -72,9 +72,9 @@ const Servers = () => {
                 <ArrowLeftLine />
               </div>
               <Image
-                sizes="100vw"
-                width={0}
-                height={0}
+                quality={100}
+                width={1026}
+                height={478}
                 src={"/altromon_about.png"}
                 alt="server"
               />

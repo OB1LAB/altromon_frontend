@@ -11,17 +11,17 @@ export default function Home() {
           className="altromon_about"
           src="/altromon_about.png"
           alt="altromon_about"
-          sizes="100vw"
-          width={0}
-          height={0}
+          width={1400}
+          height={652}
+          quality={100}
         />
         <div className="logo">
           <Image
             src="/logo.png"
             alt="logo"
-            sizes="100vw"
-            width={0}
-            height={0}
+            quality={100}
+            width={560}
+            height={112}
           />
           <div className="about">Локальный Minecraft проект</div>
           <HoveredDownloadLauncher />
