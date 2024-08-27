@@ -1,0 +1,57 @@
+.page {
+  max-width: 1000px;
+  width: 100%;
+}
+
+.nav {
+  font-size: 20px;
+  display: flex;
+  .navItem {
+    display: flex;
+    div {
+      cursor: pointer;
+      color: #34c3ff;
+    }
+  }
+}
+
+.files {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 10px;
+  button {
+    font-size: 16px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 5px;
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  }
+  .selected {
+    background: rgba(0, 255, 247, 0.2);
+    &:hover {
+      background: rgba(0, 255, 247, 0.2);
+    }
+  }
+}
+
+.buttons {
+  padding-top: 20px;
+  display: flex;
+  .upload {
+    width: 200px;
+  }
+  .delete {
+    margin: 0 20px;
+    width: 350px;
+  }
+  .confirm {
+    width: 200px;
+  }
+}

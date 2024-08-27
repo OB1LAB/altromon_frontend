@@ -53,6 +53,9 @@ const NavBar = () => {
           >
             Сервера
           </Nav.Item>
+          <Nav.Item href={"/files"} as={Link} active={"/files" === currentPath}>
+            Файлы
+          </Nav.Item>
           <Nav.Item
             href={"/description"}
             as={Link}
