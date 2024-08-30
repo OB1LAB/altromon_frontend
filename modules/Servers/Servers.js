@@ -12,6 +12,7 @@ const serverList = [
     name: "Survival",
     version: "Версия 1.21.1",
     img: "Survival_1.21.1.jpg",
+    url: "Survival_1.21.1",
     description:
       "Любитель ванильного геймплея?<br/>Хочешь просто поиграть без всяких модов?<br/>Тебе определённо на эту сборку!",
   },
@@ -19,6 +20,7 @@ const serverList = [
     name: "Hitech",
     version: "Версия 1.12.2",
     img: "Hitech_1.12.2.jpg",
+    url: "Hitech_1.12.2",
     description:
       "Комфортная индустриальная сборка<br/>IC2, AE2, Mekanism и множество других модов!<br/>Не перегружена сложными крафтами",
   },
