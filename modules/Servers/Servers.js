@@ -53,7 +53,7 @@ const Servers = () => {
                 dangerouslySetInnerHTML={{ __html: server.description }}
               />
               <div className={styles.links}>
-                <Link href={`$servers/${server.url}`}>Подробнее</Link>
+                <Link href={`servers/${server.url}`}>Подробнее</Link>
                 <Link href={"servers"} className={styles.about}>
                   Список серверов
                 </Link>
