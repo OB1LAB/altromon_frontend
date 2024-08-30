@@ -11,7 +11,8 @@ const Page = () => {
     <div className={styles.page}>
       <div className={styles.preview}>
         <Image
-          src={`/${server}.png`}
+          quality={100}
+          src={`/${server}.jpg`}
           alt={server}
           sizes="100vw"
           width={0}
@@ -31,6 +32,17 @@ const Page = () => {
         <div className={styles.descriptionLabel}>Команды</div>
         <hr />
         {info.commands.map((item, itemId) =>
+          item.length > 0 ? (
+            <div key={itemId}>{item}</div>
+          ) : (
+            <br key={itemId} />
+          ),
+        )}
+      </div>
+      <div className={styles.additions}>
+        <div className={styles.descriptionLabel}>Бинды</div>
+        <hr />
+        {info.binds.map((item, itemId) =>
           item.length > 0 ? (
             <div key={itemId}>{item}</div>
           ) : (

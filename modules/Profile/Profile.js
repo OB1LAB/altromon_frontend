@@ -99,7 +99,7 @@ const Profile = () => {
           <div className={styles.aboutSkin}>
             <div>Максимальные разрешения</div>
             <div>1.12.2 - скин 1024px, плащ 512px</div>
-            <div>1.20.1 - скин 64px, плащ 512px</div>
+            <div>1.20+ - скин 64px, плащ 512px</div>
           </div>
           <div className={styles.skinModel}>
             <div style={{ fontSize: "16px" }}>Тип скина:</div>

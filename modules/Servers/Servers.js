@@ -9,28 +9,18 @@ import ArrowRightLine from "@rsuite/icons/ArrowRightLine";
 
 const serverList = [
   {
-    name: "classic",
-    version: "Версия 1.12.2",
+    name: "Survival",
+    version: "Версия 1.21.1",
+    img: "Survival_1.21.1.jpg",
     description:
-      "Любитель Industrial Craft2?<br/>Здесь основным модом является TechReborn<br/>Это продолжение IC2 для новый версий",
+      "Любитель ванильного геймплея?<br/>Хочешь просто поиграть без всяких модов?<br/>Тебе определённо на эту сборку!",
   },
   {
-    name: "classic2",
+    name: "Hitech",
     version: "Версия 1.12.2",
+    img: "Hitech_1.12.2.jpg",
     description:
-      "Любитель Industrial Craft2?<br/>Здесь основным модом является TechReborn<br/>Это продолжение IC2 для новый версий",
-  },
-  {
-    name: "classic3",
-    version: "Версия 1.12.2",
-    description:
-      "Любитель Industrial Craft2?<br/>Здесь основным модом является TechReborn<br/>Это продолжение IC2 для новый версий",
-  },
-  {
-    name: "classic4",
-    version: "Версия 1.12.2",
-    description:
-      "Любитель Industrial Craft2?<br/>Здесь основным модом является TechReborn<br/>Это продолжение IC2 для новый версий",
+      "Комфортная индустриальная сборка<br/>IC2, AE2, Mekanism и множество других модов!<br/>Не перегружена сложными крафтами",
   },
 ];
 const Servers = () => {
@@ -75,7 +65,7 @@ const Servers = () => {
                 quality={100}
                 width={1026}
                 height={478}
-                src={"/altromon_about.png"}
+                src={`/${server.img}`}
                 alt="server"
               />
               <div onClick={selectNext}>

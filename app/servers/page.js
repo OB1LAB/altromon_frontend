@@ -13,7 +13,8 @@ const Page = () => {
           className={styles.server}
         >
           <Image
-            src={`/${server}.png`}
+            quality={100}
+            src={`/${server}.jpg`}
             alt={server}
             sizes="100vw"
             width={0}
